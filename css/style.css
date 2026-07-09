@@ -584,3 +584,8 @@ line-height:1.9;
 .abierto .carta{
     transform:translateY(-40px);
 }
+
+#abrir{
+    position:relative;
+    z-index:100;
+}

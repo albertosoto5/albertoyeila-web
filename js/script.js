@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===========================
 
     const boton = document.getElementById("abrir");
+
+if (boton) {
+    boton.onclick = function () {
+        alert("El botón funciona");
+    };
+}
     const intro = document.getElementById("intro");
     const sobre = document.getElementById("sobre");
 

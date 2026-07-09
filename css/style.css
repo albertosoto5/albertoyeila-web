@@ -525,8 +525,9 @@ line-height:1.9;
     background:#6E2C3A;
     clip-path:polygon(0 0,100% 0,50% 100%);
     transform-origin:top;
-    transition:1s;
-    z-index:3;
+    transition:transform 1s;
+    z-index:1;
+    pointer-events:none;
 }
 
 .carta{
@@ -540,7 +541,8 @@ line-height:1.9;
     justify-content:center;
     align-items:center;
     text-align:center;
-    transition:1s;
+    transition:transform 1s;
+    z-index:2;
 }
 
 .intro-fecha{

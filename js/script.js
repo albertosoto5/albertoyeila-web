@@ -1,53 +1,61 @@
-// ===========================
-// CUENTA ATRÁS
-// ===========================
+document.addEventListener("DOMContentLoaded", () => {
 
-const fechaBoda = new Date("April 24, 2027 17:30:00").getTime();
+    // ===========================
+    // CUENTA ATRÁS
+    // ===========================
 
-function actualizarContador() {
+    const fechaBoda = new Date("2027-04-24T12:00:00").getTime();
 
-    const ahora = new Date().getTime();
-    const diferencia = fechaBoda - ahora;
+    function actualizarContador() {
 
-    if (diferencia < 0) return;
+        const ahora = new Date().getTime();
+        const diferencia = fechaBoda - ahora;
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        if (diferencia < 0) return;
 
-    document.getElementById("dias").textContent = dias;
-    document.getElementById("horas").textContent = horas;
-    document.getElementById("minutos").textContent = minutos;
-    document.getElementById("segundos").textContent = segundos;
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-}
+        const d = document.getElementById("dias");
+        const h = document.getElementById("horas");
+        const m = document.getElementById("minutos");
+        const s = document.getElementById("segundos");
 
-actualizarContador();
-setInterval(actualizarContador, 1000);
+        if (d) d.textContent = dias;
+        if (h) h.textContent = horas;
+        if (m) m.textContent = minutos;
+        if (s) s.textContent = segundos;
+    }
 
-// ===========================
-// SOBRE DE BIENVENIDA
-// ===========================
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
 
-const botonAbrir = document.getElementById("abrir");
-const intro = document.getElementById("intro");
-const sobre = document.querySelector(".sobre");
+    // ===========================
+    // SOBRE
+    // ===========================
 
-if (botonAbrir) {
+    const boton = document.getElementById("abrir");
+    const intro = document.getElementById("intro");
+    const sobre = document.querySelector(".sobre");
 
-    botonAbrir.addEventListener("click", () => {
+    if (boton && intro && sobre) {
 
-        sobre.classList.add("abierto");
+        boton.addEventListener("click", () => {
 
-        setTimeout(() => {
-            intro.style.opacity = "0";
-        }, 1000);
+            sobre.classList.add("abierto");
 
-        setTimeout(() => {
-            intro.style.display = "none";
-        }, 1800);
+            setTimeout(() => {
+                intro.style.opacity = "0";
+            }, 1000);
 
-    });
+            setTimeout(() => {
+                intro.style.display = "none";
+            }, 1800);
 
-}
+        });
+
+    }
+
+});

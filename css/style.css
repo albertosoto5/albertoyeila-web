@@ -448,3 +448,46 @@ font-size:18px;
 line-height:1.9;
 
 }
+/* GALERÍA PREMIUM */
+
+.galeria-texto{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 45px;
+    font-size:18px;
+    color:#666;
+}
+
+.galeria{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:18px;
+
+}
+
+.galeria img{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.galeria img:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}  

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const boton = document.getElementById("abrir");
     const intro = document.getElementById("intro");
-    const sobre = document.querySelector(".sobre");
+    const sobre = document.getElementById("sobre");
 
     if (boton && intro && sobre) {
 

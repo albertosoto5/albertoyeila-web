@@ -491,3 +491,94 @@ line-height:1.9;
     box-shadow:0 15px 35px rgba(0,0,0,.15);
 
 }  
+/* =========================
+   INTRO - SOBRE
+========================= */
+
+#intro{
+    position:fixed;
+    inset:0;
+    background:#F7F3EE;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:1s;
+}
+
+.sobre{
+    position:relative;
+    width:340px;
+    height:240px;
+    background:#fdf8f2;
+    border-radius:8px;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+    overflow:hidden;
+}
+
+.tapa{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:#6E2C3A;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    transform-origin:top;
+    transition:1s;
+    z-index:3;
+}
+
+.carta{
+    position:absolute;
+    inset:15px;
+    background:white;
+    border-radius:6px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:1s;
+}
+
+.intro-fecha{
+    color:#7E8A63;
+    letter-spacing:3px;
+    font-size:13px;
+}
+
+.carta h1{
+    font-family:'Cormorant Garamond',serif;
+    color:#6E2C3A;
+    font-size:46px;
+    margin:15px 0;
+}
+
+.carta p{
+    margin-bottom:25px;
+}
+
+#abrir{
+    background:#6E2C3A;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#abrir:hover{
+    background:#4F202A;
+}
+
+.abierto .tapa{
+    transform:rotateX(180deg);
+}
+
+.abierto .carta{
+    transform:translateY(-40px);
+}

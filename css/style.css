@@ -15,6 +15,9 @@ html{
 body{
     font-family:'Manrope',sans-serif;
     background:#F7F3EE;
+    background-image:url("assets/images/165A570A-D2AB-4E6A-AE72-160C689EE934.jpeg");
+    background-repeat:repeat;
+    background-size:220px;
     color:#4f4f4f;
     line-height:1.8;
 }

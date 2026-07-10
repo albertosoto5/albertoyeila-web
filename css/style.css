@@ -491,8 +491,7 @@ line-height:1.9;
     transform:scale(1.04);
 
     box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-}  
+    
 /* ===========================
    INTRO
 =========================== */
@@ -510,29 +509,71 @@ line-height:1.9;
 
 .sobre{
     position:relative;
-    width:380px;
-    height:260px;
-    margin:auto;
-    perspective:1200px;
+    width:420px;
+    max-width:90%;
+    background:#FFFDF9;
+    border:1px solid #E7DDD2;
+    border-radius:14px;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+    padding:60px 40px 40px;
+    overflow:hidden;
+}
+
+/* Solapa del sobre */
+
+.sobre::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:#6E2C3A;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+}
+
+/* Sello */
+
+.sello{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:#6E2C3A;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:25px auto 30px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    position:relative;
+    z-index:2;
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
 }
 
 .intro-frase{
-    font-family:'Cormorant Garamond', serif;
-    font-size:42px;
+    position:relative;
+    z-index:2;
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
     color:#6E2C3A;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 .intro-fecha{
-    font-family:'Cormorant Garamond', serif;
-    font-size:28px;
-    font-weight:400;
-    letter-spacing:4px;
+    position:relative;
+    z-index:2;
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
     color:#7E8A63;
-    margin-bottom:45px;
+    letter-spacing:3px;
+    font-weight:400;
+    margin-bottom:40px;
 }
 
 #abrir{
+    position:relative;
+    z-index:2;
     background:#6E2C3A;
     color:#fff;
     border:none;
@@ -546,12 +587,4 @@ line-height:1.9;
 #abrir:hover{
     background:#4F202A;
     transform:translateY(-2px);
-}
-
-.abierto .tapa{
-    transform:rotateX(180deg);
-}
-
-.abierto .carta{
-    transform:translateY(-45px);
 }

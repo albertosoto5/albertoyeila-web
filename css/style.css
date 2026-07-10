@@ -462,11 +462,19 @@ line-height:1.9;
    GALERÍA · COLLAGE
 =========================== */
 
+.galeria-texto{
+    max-width:700px;
+    margin:0 auto 45px;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+    color:#666;
+}
+
 .galeria{
     display:grid;
-    grid-template-columns:repeat(12,1fr);
-    gap:22px;
-    align-items:start;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
 }
 
 .galeria img{

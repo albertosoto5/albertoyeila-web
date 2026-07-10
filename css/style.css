@@ -698,3 +698,29 @@ line-height:1.9;
 #musicaBtn:active{
     transform:scale(.97);
 }
+
+body{
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+
+    top:0;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:120px;
+
+    background-image:url("../assets/images/IMG_5425.jpeg");
+    background-repeat:repeat-y;
+    background-position:center;
+    background-size:contain;
+
+    opacity:0.04;
+
+    pointer-events:none;
+    z-index:-1;
+}

@@ -618,8 +618,47 @@ line-height:1.9;
 
 /* Sello */
 
+/* SELLO */
+
 .sello{
-    margin:0 auto 25px;
+
+    width:90px;
+    height:90px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    background:linear-gradient(145deg,#F5F0E7,#DDD1BE);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.8),
+        inset 0 -4px 8px rgba(0,0,0,.08),
+        0 8px 18px rgba(0,0,0,.15);
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.sello .a,
+.sello .e{
+
+    color:#ffffff;
+    font-size:42px;
+    font-weight:600;
+
+}
+
+.sello .amp{
+
+    color:#C8A55A;
+    font-size:30px;
+    margin:0 -4px;
+
 }
 
 .intro-frase{

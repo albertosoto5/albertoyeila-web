@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ===========================
+    // CUENTA ATRÁS
+    // ===========================
+
     const fechaBoda = new Date("2027-04-24T12:00:00").getTime();
 
-    function actualizarContador(){
+    function actualizarContador() {
 
         const ahora = Date.now();
         const diferencia = fechaBoda - ahora;
 
-        if(diferencia < 0) return;
+        if (diferencia < 0) return;
 
         document.getElementById("dias").textContent =
             Math.floor(diferencia / 86400000);
@@ -24,20 +28,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     actualizarContador();
-    setInterval(actualizarContador,1000);
+    setInterval(actualizarContador, 1000);
 
-    const boton=document.getElementById("abrir");
-    const intro=document.getElementById("intro");
+    // ===========================
+    // INTRO
+    // ===========================
 
-boton.addEventListener("click", () => {
+    const boton = document.getElementById("abrir");
+    const intro = document.getElementById("intro");
 
-    intro.style.opacity = "0";
+    if (boton && intro) {
 
-    setTimeout(() => {
-        intro.style.display = "none";
+        boton.addEventListener("click", (e) => {
 
-        window.scrollTo(0, 0);
+            e.preventDefault();
 
-    }, 800);
+            // Volver al inicio antes de mostrar la web
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "auto"
+            });
+
+            intro.style.opacity = "0";
+
+            setTimeout(() => {
+                intro.style.display = "none";
+            }, 800);
+
+        });
+
+    }
 
 });

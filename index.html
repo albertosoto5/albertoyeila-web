@@ -250,19 +250,42 @@ Gracias por formar parte de nuestra historia.
 
 <section id="rsvp">
 
-<h2>Confirmar asistencia</h2>
+    <h2>Confirma tu asistencia</h2>
 
-<p>
+    <p>
+        Nos ayudaría mucho que confirmaras tu asistencia antes del <strong>1 de marzo de 2027</strong>.
+    </p>
 
-Muy pronto podrás confirmar tu asistencia directamente desde esta página.
+    <form id="formulario">
 
-</p>
+        <input
+            type="text"
+            placeholder="Nombre y apellidos"
+            required
+        >
 
-<a href="#" class="boton">
+        <select required>
+            <option value="">¿Asistirás?</option>
+            <option>Sí, asistiré</option>
+            <option>No podré asistir</option>
+        </select>
 
-Confirmar asistencia
+        <input
+            type="number"
+            placeholder="Número de asistentes"
+            min="1"
+            max="10"
+        >
 
-</a>
+        <textarea
+            placeholder="Alergias, intolerancias o cualquier comentario"
+        ></textarea>
+
+        <button class="boton">
+            Enviar confirmación
+        </button>
+
+    </form>
 
 </section>
 

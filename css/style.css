@@ -497,80 +497,84 @@ line-height:1.9;
    INTRO - SOBRE
 ========================= */
 
+/* ===========================
+   INTRO
+=========================== */
+
 #intro{
-    display:none;
+    position:fixed;
+    inset:0;
+    background:#F7F3EE;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:opacity .8s ease;
 }
 
 .sobre{
-    position:relative;
-    width:340px;
-    height:240px;
-    background:#fdf8f2;
-    border-radius:8px;
-    box-shadow:0 20px 60px rgba(0,0,0,.15);
-    overflow:hidden;
+    width:360px;
+    max-width:90%;
 }
 
-.tapa{
-    display:none;
-}
+.sobre-frontal{
 
-.carta{
-    position:absolute;
-    inset:15px;
-    background:white;
-    border-radius:6px;
-    padding:30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    background:#fff;
+
+    border:2px solid #D7C4A3;
+
+    border-radius:18px;
+
+    padding:45px 35px;
+
     text-align:center;
-    transition:transform 1s;
-    z-index:2;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
 }
 
-.intro-fecha{
-    color:#7E8A63;
-    letter-spacing:3px;
-    font-size:13px;
-}
+.sobre-frontal h1{
 
-.carta h1{
     font-family:'Cormorant Garamond',serif;
+
     color:#6E2C3A;
-    font-size:46px;
-    margin:15px 0;
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
 }
 
-.carta p{
-    margin-bottom:25px;
+.sobre-frontal p{
+
+    color:#7E8A63;
+
+    letter-spacing:3px;
+
+    margin-bottom:35px;
+
 }
 
 #abrir{
+
     background:#6E2C3A;
-    color:white;
+
+    color:#fff;
+
     border:none;
-    padding:15px 35px;
-    border-radius:50px;
+
+    padding:16px 38px;
+
+    border-radius:40px;
+
     font-size:16px;
+
     cursor:pointer;
-    transition:.3s;
+
 }
 
 #abrir:hover{
+
     background:#4F202A;
-}
 
-.abierto .tapa{
-    transform:rotateX(180deg);
-}
-
-.abierto .carta{
-    transform:translateY(-40px);
-}
-
-#abrir{
-    position:relative;
-    z-index:100;
 }

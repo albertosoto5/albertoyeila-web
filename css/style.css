@@ -20,23 +20,6 @@ body{
     position:relative;
 }
 
-body::before{
-    content:"";
-    position:fixed;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:140px;
-
-    background-image:url("../assets/images/165A570A-D2AB-4E6A-AE72-160C689EE934.jpeg");
-    background-repeat:no-repeat;
-    background-position:center bottom;
-    background-size:contain;
-
-    pointer-events:none;
-    z-index:-1;
-}
-
 body{
     font-family:'Manrope',sans-serif;
     background:#F7F3EE;

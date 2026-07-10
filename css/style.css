@@ -289,6 +289,9 @@ h2{
 
 .info div{
 
+    position:relative;
+    overflow:hidden;
+
     background:white;
 
     padding:35px;
@@ -298,6 +301,41 @@ h2{
     text-align:center;
 
     box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.info div::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    opacity:.12;
+
+    z-index:0;
+
+}
+
+.info div:first-child::before{
+
+    background-image:url("../assets/images/254D3CD1-C60F-4898-942C-3BC876C89FF0.png");
+
+}
+
+.info div:last-child::before{
+
+    background-image:url("../assets/images/IMG_5424.png");
+
+}
+
+.info div *{
+
+    position:relative;
+    z-index:1;
 
 }
 

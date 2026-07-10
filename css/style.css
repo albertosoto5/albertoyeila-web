@@ -493,10 +493,6 @@ line-height:1.9;
     box-shadow:0 15px 35px rgba(0,0,0,.15);
 
 }  
-/* =========================
-   INTRO - SOBRE
-========================= */
-
 /* ===========================
    INTRO
 =========================== */
@@ -504,77 +500,53 @@ line-height:1.9;
 #intro{
     position:fixed;
     inset:0;
-    background:#F7F3EE;
     display:flex;
     justify-content:center;
     align-items:center;
+    background:#F7F3EE;
     z-index:99999;
     transition:opacity .8s ease;
 }
 
 .sobre{
-    width:360px;
-    max-width:90%;
-}
-
-.sobre-frontal{
-
     background:#fff;
-
-    border:2px solid #D7C4A3;
-
-    border-radius:18px;
-
-    padding:45px 35px;
-
+    width:90%;
+    max-width:520px;
+    padding:70px 45px;
+    border-radius:24px;
     text-align:center;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
-
+    box-shadow:0 20px 60px rgba(0,0,0,.10);
+    border:1px solid #E8DDD2;
 }
 
-.sobre-frontal h1{
-
-    font-family:'Cormorant Garamond',serif;
-
+.intro-frase{
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px;
     color:#6E2C3A;
-
-    font-size:52px;
-
-    margin-bottom:10px;
-
+    margin-bottom:25px;
 }
 
-.sobre-frontal p{
-
+.intro-fecha{
+    font-family:'Cormorant Garamond', serif;
+    font-size:28px;
+    font-weight:400;
+    letter-spacing:4px;
     color:#7E8A63;
-
-    letter-spacing:3px;
-
-    margin-bottom:35px;
-
+    margin-bottom:45px;
 }
 
 #abrir{
-
     background:#6E2C3A;
-
     color:#fff;
-
     border:none;
-
-    padding:16px 38px;
-
     border-radius:40px;
-
+    padding:16px 42px;
     font-size:16px;
-
     cursor:pointer;
-
+    transition:.3s;
 }
 
 #abrir:hover{
-
     background:#4F202A;
-
+    transform:translateY(-2px);
 }

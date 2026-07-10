@@ -61,3 +61,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+// ===========================
+// ANIMACIONES AL HACER SCROLL
+// ===========================
+
+const elementos = document.querySelectorAll(".animar");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("visible");
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+elementos.forEach(elemento => {
+
+    observer.observe(elemento);
+
+});

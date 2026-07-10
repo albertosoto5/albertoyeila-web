@@ -580,25 +580,26 @@ line-height:1.9;
 
 .sobre{
     position:relative;
-    width:420px;
+    width:430px;
     max-width:90%;
     background:#FFFDF9;
     border:1px solid #E7DDD2;
-    border-radius:14px;
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
-    padding:60px 40px 40px;
+    border-radius:18px;
+    box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+    padding:40px 40px 50px;
+
     overflow:hidden;
 }
 
 .carta{
     position:relative;
-    width:100%;
-    height:100%;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
+    gap:20px;
     z-index:2;
 }
 
@@ -677,18 +678,17 @@ line-height:1.9;
     color:#fff;
 
     border:none;
-    border-radius:40px;
+    border-radius:50px;
 
-    padding:16px 42px;
+    padding:16px 48px;
 
-    font-size:16px;
+    font-size:17px;
+    font-weight:500;
+
+    margin-top:10px;
 
     cursor:pointer;
-
     transition:.3s;
-
-    margin-top:25px;
-    margin-bottom:35px;
 }
 
 #abrir:hover{

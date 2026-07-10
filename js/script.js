@@ -89,3 +89,30 @@ elementos.forEach(elemento => {
     observer.observe(elemento);
 
 });
+
+// ===========================
+// MÚSICA
+// ===========================
+
+const musica = document.getElementById("musica");
+const musicaBtn = document.getElementById("musicaBtn");
+
+let reproduciendo = false;
+
+musicaBtn.addEventListener("click", () => {
+
+    if (reproduciendo) {
+
+        musica.pause();
+        musicaBtn.textContent = "♪ Música";
+        reproduciendo = false;
+
+    } else {
+
+        musica.play();
+        musicaBtn.textContent = "❚❚ Pausar";
+        reproduciendo = true;
+
+    }
+
+});

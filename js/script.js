@@ -1,67 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ===========================
-    // CUENTA ATRÁS
-    // ===========================
-
     const fechaBoda = new Date("2027-04-24T12:00:00").getTime();
 
-    function actualizarContador() {
+    function actualizarContador(){
 
-        const ahora = new Date().getTime();
+        const ahora = Date.now();
         const diferencia = fechaBoda - ahora;
 
-        if (diferencia < 0) return;
+        if(diferencia < 0) return;
 
-        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        document.getElementById("dias").textContent =
+            Math.floor(diferencia / 86400000);
 
-        const d = document.getElementById("dias");
-        const h = document.getElementById("horas");
-        const m = document.getElementById("minutos");
-        const s = document.getElementById("segundos");
+        document.getElementById("horas").textContent =
+            Math.floor((diferencia % 86400000) / 3600000);
 
-        if (d) d.textContent = dias;
-        if (h) h.textContent = horas;
-        if (m) m.textContent = minutos;
-        if (s) s.textContent = segundos;
+        document.getElementById("minutos").textContent =
+            Math.floor((diferencia % 3600000) / 60000);
+
+        document.getElementById("segundos").textContent =
+            Math.floor((diferencia % 60000) / 1000);
+
     }
 
     actualizarContador();
-    setInterval(actualizarContador, 1000);
+    setInterval(actualizarContador,1000);
 
-    // ===========================
-    // SOBRE
-    // ===========================
+    const boton=document.getElementById("abrir");
+    const intro=document.getElementById("intro");
 
-    const boton = document.getElementById("abrir");
+    boton.addEventListener("click",()=>{
 
-if (boton) {
-    boton.onclick = function () {
-        alert("El botón funciona");
-    };
-}
-    const intro = document.getElementById("intro");
-    const sobre = document.getElementById("sobre");
+        intro.style.opacity="0";
 
-    if (boton && intro && sobre) {
+        setTimeout(()=>{
+            intro.style.display="none";
+        },800);
 
-        boton.addEventListener("click", () => {
-
-            sobre.classList.add("abierto");
-
-            setTimeout(() => {
-                intro.style.opacity = "0";
-            }, 1000);
-
-            setTimeout(() => {
-                intro.style.display = "none";
-            }, 1800);
-
-        });
-
-    }
+    });
 
 });

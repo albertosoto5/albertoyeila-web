@@ -29,14 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const boton=document.getElementById("abrir");
     const intro=document.getElementById("intro");
 
-    boton.addEventListener("click",()=>{
+boton.addEventListener("click", () => {
 
-        intro.style.opacity="0";
+    intro.style.opacity = "0";
 
-        setTimeout(()=>{
-            intro.style.display="none";
-        },800);
+    setTimeout(() => {
+        intro.style.display = "none";
 
-    });
+        window.scrollTo(0, 0);
+
+    }, 800);
 
 });

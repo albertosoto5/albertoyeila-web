@@ -619,24 +619,19 @@ line-height:1.9;
 /* SELLO */
 
 .sello{
-    width:80px;
-    height:80px;
+    margin:0 auto 25px;
 
-    margin:0 auto 30px;
+    width:auto;
+    height:auto;
 
-    border:1.5px solid #D9CDBB;
-    border-radius:50%;
+    background:none;
+    border:none;
+    box-shadow:none;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:#FFFDF9;
-
-    font-family:'Cormorant Garamond',serif;
-    font-size:28px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:52px;
     color:#6E2C3A;
-    letter-spacing:1px;
+    letter-spacing:2px;
 }
 
 /* Sello */

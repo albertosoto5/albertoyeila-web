@@ -590,6 +590,18 @@ line-height:1.9;
     overflow:hidden;
 }
 
+.sobre{
+    position:relative;
+    width:420px;
+    max-width:90%;
+    background:#FFFDF9;
+    border:1px solid #E7DDD2;
+    border-radius:14px;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+    padding:60px 40px 40px;
+    overflow:hidden;
+}
+
 .carta{
     position:relative;
     width:100%;
@@ -600,20 +612,6 @@ line-height:1.9;
     align-items:center;
     text-align:center;
     z-index:2;
-}
-
-/* Solapa del sobre */
-
-.sobre{
-    position:relative;
-    width:420px;
-    height:320px;
-    max-width:90%;
-    background:#FFFDF9;
-    border:1px solid #E7DDD2;
-    border-radius:14px;
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
-    overflow:hidden;
 }
 
 /* Sello */
@@ -644,21 +642,10 @@ line-height:1.9;
 
 }
 
-.sello .a,
-.sello .e{
+/* Sello */
 
-    color:#ffffff;
-    font-size:42px;
-    font-weight:600;
-
-}
-
-.sello .amp{
-
-    color:#C8A55A;
-    font-size:30px;
-    margin:0 -4px;
-
+.sello{
+    margin:0 auto 25px;
 }
 
 .intro-frase{

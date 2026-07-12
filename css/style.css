@@ -764,9 +764,7 @@ body::before{
 
 .dresscode-img{
     display:block;
-    width:100%;
-    max-width:900px;
-    margin:40px auto 0;
-    border-radius:20px;
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    width:75%;
+    max-width:500px;
+    margin:35px auto 0;
 }

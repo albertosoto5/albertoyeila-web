@@ -756,3 +756,17 @@ body::before{
     pointer-events:none;
     z-index:-1;
 }
+
+#dresscode{
+    padding:90px 20px;
+    text-align:center;
+}
+
+.dresscode-img{
+    display:block;
+    width:100%;
+    max-width:900px;
+    margin:40px auto 0;
+    border-radius:20px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+}

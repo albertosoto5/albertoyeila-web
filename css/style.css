@@ -768,3 +768,23 @@ body::before{
     max-width:800px;
     margin:35px auto 0;
 }
+
+
+/* LOGOTIPO OFICIAL DE LA BODA */
+
+.sello{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 25px;
+    background:none;
+    border:none;
+    box-shadow:none;
+}
+
+.sello img{
+    width:140px;
+    height:140px;
+    object-fit:contain;
+    display:block;
+}

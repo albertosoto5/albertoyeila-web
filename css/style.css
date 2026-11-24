@@ -788,3 +788,13 @@ body::before{
     object-fit:contain;
     display:block;
 }
+
+
+.sello img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
